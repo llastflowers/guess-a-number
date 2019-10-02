@@ -1,1 +1,1 @@
-import './guess-number.test';
+import './guess-number.test.js';

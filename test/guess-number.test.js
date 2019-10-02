@@ -4,7 +4,7 @@ import compareNumbers from '../compare-numbers.js';
 
 const test = QUnit.test;
 
-test('should return 0 if userNumber and correctNumber are the same', function(assert) {
+test('should return 0 if user number and correct number are the same', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const correctNumber = 17;
@@ -17,7 +17,7 @@ test('should return 0 if userNumber and correctNumber are the same', function(as
     assert.equal(result, 0);
 });
 
-test('should return -1 if userNumber is lower than the correctNumber', function(assert) {
+test('should return -1 if user number is lower than the correct number', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const correctNumber = 17;
@@ -30,7 +30,7 @@ test('should return -1 if userNumber is lower than the correctNumber', function(
     assert.equal(result, -1);
 });
 
-test('should return 1 if userNumber is higher than the correctNumber', function(assert) {
+test('should return 1 if user number is higher than the correct number', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const correctNumber = 17;

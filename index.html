@@ -11,18 +11,21 @@
 
 <body>
     <h1>Guess The Number!</h1>
-    <p><strong>Can you guess the number?</strong> Start by guessing a number from 1-20. If you guess incorrectly, the game will tell you if your guess was too high or too low. You win the game if you can guess the number within three attempts.
-        
-    [disable further input and display an end lose or win message.]
-    </p>
+    <div class="game">
+        <p>Can you guess the number? Start by guessing a number from 1-20. If you guess incorrectly, the game will tell you if your guess was too high or too low. You win the game if you can guess the number within three attempts.
+        </p>
 
-    <label>
-        Enter a number: <input id="user-number" type="number" min="1" max="20"> <button id="guess-button">Guess!</button>
-    </label>
-    <br><br>
-    <div>You have <span id="attempts-remaining">3</span> attempt(s) remaining!</div>
-
-    <script src="app.js"></script>
+        <label>
+            <h3>Enter a number below:</h3>
+            <div class="guess">
+            <input class="textbox" id="user-number" type="number" min="1" max="20"><button class="button" id="guess-button">Guess!</button>
+            </label>
+    
+        <div class="attempts">You have<span id="attempts-remaining">4</span>attempt(s) remaining!</div>
+        </div>
+        <span class="results" id="game-results"></span>
+    </div>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
