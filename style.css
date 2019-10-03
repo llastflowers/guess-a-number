@@ -10,7 +10,7 @@ h3 {
 }
 
 .game {
-    margin: 0px 0px 0px 630px;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
     width: 600px;
@@ -51,16 +51,18 @@ h1 {
     border-radius: 10px;
     font-size: 40px;
     padding: 20px;
-    margin: 0px 15px 0px 15px;
+    margin: 0px 25px 0px 25px;
 }
 
 .attempts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-
+#attempts-remaining{
+    font-size: 43px;
+}
 .results {
     display: flex;
     justify-content: center;
