@@ -1,48 +1,41 @@
+// Initialize DOM State
 import compareNumbers from './compare-numbers.js';
-
-const correctNumber = 17;
-
+const correctNumber = Math.floor((Math.random() * 20) + 1);
 const userNumber = document.getElementById('user-number');
 const guessButton = document.getElementById('guess-button');
-const attemptsRemaining = document.getElementById('attempts-remaining');
-const gameResults = document.getElementById('game-results');
+const attemptsRemainingDisplay = document.getElementById('attempts-remaining');
+const gameResultsDisplay = document.getElementById('game-results');
 
-attemptsRemaining.textContent = 4;
-
+attemptsRemainingDisplay.textContent = 4;
 let attempts = 4;
 
-guessButton.addEventListener('click', () => {
-    attempts = attempts - 1;
-    let userGuess = userNumber.value;
-    console.log(userGuess);
-
-    attemptsRemaining.textContent = attempts;
-
-    userGuess = Number(userGuess);
-
-    console.log(compareNumbers(userGuess, correctNumber));
-
-    let result = compareNumbers(userGuess, correctNumber);   
+// Utilities
+const displayResults = () => {
+    console.log(correctNumber);
+    let userInput = userNumber.value;
+    userInput = Number(userInput);
+    let result = compareNumbers(userInput, correctNumber);   
 
     if (result === 0) {
-        gameResults.textContent = 'You Win!';
+        gameResultsDisplay.textContent = 'You Win!';
         guessButton.disabled = true;    
     } else if (attempts === 0) {
         guessButton.disabled = true;
-        gameResults.textContent = 'You Lose!';
+        gameResultsDisplay.textContent = 'You Lose!';
     } else if (result === 1){
-        gameResults.textContent = 'Your guess was too high!';
+        gameResultsDisplay.textContent = 'Your guess was too high!';
     } else if (result === -1){
-        gameResults.textContent = 'Your guess was too low!';
+        gameResultsDisplay.textContent = 'Your guess was too low!';
     }
+};
 
-//     const compareNumbers = (attempts) => {
+// Change DOM State
+const providedUserFeedback = () => {
+    attempts--;
+    attemptsRemainingDisplay.textContent = attempts;
 
-//         if (attempts < 1) return true;
-         
-//         return false;
+    displayResults();
+};
 
-//         function youLose(attempts, )
-
-//    };
-});
+// Event Listeners
+guessButton.addEventListener('click', providedUserFeedback);
